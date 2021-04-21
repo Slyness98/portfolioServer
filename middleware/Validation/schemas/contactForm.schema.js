@@ -32,8 +32,6 @@ const validationSchema = {
       }
     },
     companyName: {
-        // $$root: true,
-        // trim: true,
         type: "string",
         empty: true,
         optional: true

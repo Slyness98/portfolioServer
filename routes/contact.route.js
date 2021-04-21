@@ -1,10 +1,12 @@
 const express = require('express');
+const validator = require("../middleware/Validation/validator");
 const contactController = require('../controllers/contact/contact.controller');
 
 const router = express.Router();
 
-router.post("/", contactController.validate, contactController.limiter, (req, res) => {
-  contactController.receiveMessage(req,res)
+const {validate, rateLimiter} = validator;
+router.post("/", validate, rateLimiter, (req, res) => {
+    contactController.processRequest(req,res)
 });
 
 module.exports = router;
