@@ -4,12 +4,12 @@
   "description": "",
   "main": "server.js",
   "engines": {
-    "node": "13.x"
+    "node": "13.7.0"
   },
   "scripts": {
     "start": "node server.js",
     "devstart": "nodemon server.js",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
