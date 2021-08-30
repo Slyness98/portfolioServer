@@ -27,6 +27,6 @@ app.use(express.urlencoded({
 app.use("/contact", contactRoute);
 
 const port = process.env.PORT;
-app.listen(port, 'localhost', () => {
+app.listen(port, () => {
   console.log(`server running on port ${port}`)
 });
