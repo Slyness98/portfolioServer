@@ -26,7 +26,7 @@ app.use(express.urlencoded({
 //PATHS DEFINED BY IMPORTED ROUTER INSTANCES 
 app.use("/contact", contactRoute);
 
-const port = process.env.PORT;
+const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`server running on port ${port}`)
 });
