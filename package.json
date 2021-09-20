@@ -10,7 +10,7 @@
   "scripts": {
     "start": "node server.js",
     "devstart": "nodemon server.js",
-    "heroku-postbuild": "cd client && npm install && npm build"
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
