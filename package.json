@@ -9,7 +9,8 @@
   },
   "scripts": {
     "start": "node server.js",
-    "devstart": "nodemon server.js"
+    "devstart": "nodemon server.js",
+    "heroku-postbuild": "cd client && npm install && npm build"
   },
   "author": "",
   "license": "ISC",
