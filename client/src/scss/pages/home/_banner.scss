@@ -1,0 +1,318 @@
+
+@font-face {
+  font-family: space-age;
+  src: url("../../assets/fonts/space_age/spaceAge.woff");
+}
+
+@font-face {
+  font-family: cut-caps;
+  src: url("../../assets/fonts/cut_caps/cutCaps.woff");
+}
+
+.section-home {
+  height: 100%;
+  background-color: black;
+}
+
+.banner {
+  &__container {
+    position: absolute;
+    top: 10%;
+    height: 58%;
+    width: 100%;
+    display: flex;
+    
+    @include bp("standard-land") {
+      width: 95%;
+      height: 75%;
+      top: 0;
+      margin: 0;
+    }
+
+    @include bp("tab-md--ol") {
+      height: 82%;
+      width: 88%;
+      left: 5.75%;
+    }
+  }
+
+  &__block {
+    width: 100%;
+    position: absolute;
+    margin-top: 5rem;
+    
+    &--1 {
+      @include bp("standard-land") {
+        margin-top: 0;
+      }
+
+      @include bp("tab-md--ol") {
+        margin-top: 0;
+      }
+    }
+
+
+    &--2 {
+      text-align: center;
+      bottom: 45%;
+
+      @include bp("standard-land") {
+        display: flex;
+        justify-content: flex-start;
+        bottom: 2%;
+        padding-left: 8%;
+      }
+
+      @include bp('standard-land--ar3/1') {
+        bottom: 16%;
+      }
+
+      @include bp("tab-md--ol", "desktop") {
+         width: 70%;
+         bottom: 2%;
+         left: 3%;
+         text-align: initial;
+      }
+    }
+
+    &--3 {
+      margin-top: 0;
+      height: 20%;
+      bottom: 15%;
+      display: flex;
+      justify-content: space-evenly;
+
+      @include bp("standard-land--ar3/1") {
+        top: 0;
+        height: 71%;
+        width: 56%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      @include bp("tab-md") {
+        bottom: 30%;
+      }
+
+      @include bp("tab-md--ar4/1") {
+        height: 90%;
+        width: 30%;
+        bottom: 2%;
+        left: 35%;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      @include bp("tab-lg--ar4/1") {
+        height: 80%;
+      }
+    }
+  }
+
+  &__text {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    overflow: hidden; 
+
+    color: #fff;
+    font-family: 'space-age';
+    font-weight: bold;
+    font-size: 3rem;
+
+    @include bp("standard-land") {
+      font-size: 2rem;
+    }
+
+    @include bp("phone") {
+      font-size: 4rem;
+    }
+
+    @include bp("phone--ol") {
+      font-size: initial;
+    }
+
+    @include bp("desktop") {
+      font-size: 6rem;
+    }
+
+    &__p {
+      display: flex;
+      flex-flow: row;
+      justify-content: center;
+    
+      &--1 {
+        animation: fadeIn 3.5s ease-in;
+        justify-content: center;
+
+        & :last-child {
+          color: $magenta;
+          &:hover{
+            color: #fff;
+          }
+        }
+
+        @include bp("standard-land") {
+          margin-top: 5rem;
+          justify-content: flex-end;
+        }
+        
+        @include bp("phone", "phone--ol") {
+          font-size: 3.33rem;
+        }
+
+        @include bp("phone-lg", "phone-lg--ol") {
+          font-size: 3.885rem;
+        }
+
+        @include bp('tab--op', 'tab--ol') {
+          font-size: 5rem;
+        }
+
+        @include bp('tab-md') {
+          margin-top: 0;
+        }
+
+        @include bp('tab-md--ol') {
+          justify-content: flex-end;
+        }
+
+        @include bp('desktop') {
+          font-size: 6rem;
+        }
+      }
+
+      &--2 {
+        font-size: 2rem;
+        justify-content: center;
+        margin-top: 1rem;
+        animation: fadeIn 3.5s ease-in;
+
+        @include bp("standard-land", "tab-md--ol") {
+          justify-content: flex-end;
+        }
+
+
+        @include bp("phone") {
+          font-size: 2.23rem;
+        }
+
+        @include bp("phone-lg", "phone-lg--ol") {
+          font-size: 2.37rem;
+        }
+
+        @include bp("tab--op", "tab--ol") {
+          font-size: 3rem;
+        }
+
+        @include bp("desktop") {
+          font-size: 3.5rem;
+          justify-content: flex-end;
+        }
+      }
+
+      &--3 {
+        color: #888;
+        animation: fadeIn 3.5s ease-in;
+        font-size: 4.2rem;
+
+        @include bp("standard-land", "tab-md--ol") {
+          justify-content: flex-end;
+          letter-spacing: 0;
+          margin: -.5rem;
+          font-size: 4.2rem;
+        }
+
+        @include bp("phone", "phone--ol") {
+          font-size: 4.75rem;
+        }
+
+        @include bp("phone-lg", "phone-lg--ol") {
+          font-size: 4.89rem;
+        }
+
+        @include bp("tab--op", "tab--ol") {
+          font-size: 6rem;
+        }
+
+        @include bp("desktop") {
+          font-size: 6.5rem;
+        }
+
+        & :last-child {
+          color: $magenta;
+        }
+      }
+
+      &--4 {
+        animation: fadeIn 3s ease-in;
+        & :nth-child(2) {
+          color: $magenta;
+          &:hover{
+            color: #fff;
+          }
+        }
+
+        @include bp("standard-land") {
+          align-items: flex-end;
+          padding-right: 1rem;
+          font-size: inherit;
+        }
+
+        @include bp("phone", "phone--ol") {
+          font-size: 3.9025rem;
+        }
+
+        @include bp("phone-lg", "phone-lg--ol") {
+          font-size: 4.05rem;
+        }
+
+        @include bp("tab-md--ol") {
+          justify-content: flex-start;
+          font-size: 4rem;
+        }
+
+        @include bp("desktop") {
+          font-size: 6rem;
+        }
+      }
+
+      &__letter {
+        text-transform: uppercase;
+        padding: 3px;
+        transition: all .5s;
+
+        @include bp("desktop") {
+          padding: 4px;
+        }
+
+        &:hover {
+          cursor: pointer;
+          animation: fadeChangeFont 1.25s ease-out;
+          line-height: -1px;
+          font-family: 'cut-caps';
+          color: $magenta;
+        }
+
+      }
+    }
+  }
+}
+
+@keyframes fadeChangeFont{
+  0% {
+    opacity: 0;
+    font-family: 'cut-caps'; 
+    line-height: -1px;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0;}
+  100% { opacity: 1;}
+}
